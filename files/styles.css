@@ -179,3 +179,88 @@ ul{
     text-align: center;
     padding-bottom: 20px;
 }
+/* Form styles*/
+.login-box{
+    max-width: 700px;
+    float: none;
+    margin: 150px auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+.login-right input{
+    color: #e6e9f7;
+}
+.login-left{
+    background: azure;
+    padding: 30px;
+}
+.login-right{
+    background: #0a1718;
+    padding: 30px;
+}
+.login-right h2, label{
+    color: #0099cc;
+
+}
+.form-control{
+    background-color: transparent !important;
+}
+
+/*Mobile Friendly */
+@media (max-width: 700px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-main ul.nav-menu{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #0a1718;
+        height: 100%;
+        padding: 30%;
+        opacity: .9;
+        transform: translateX(-400px);
+        transition: transform .5s ease-in-out;
+    }
+
+    .nav-main ul.nav-menu.show {
+        transform: translateX(-20px);
+    }
+
+    .nav-main ul.nav-menu li {
+        padding: 20px;
+        font-size: 14px;
+    }
+    .nav-main ul.nav-menu-right{
+        margin-right: 40px;
+    }
+    .Demo-cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-links .footer-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 500px) {
+        .demo-cards {
+            grid-template-columns: 1fr;
+        }
+    
+        .demo-cards img {
+            height: 270px;
+        }
+    
+        .card-banner-one .content {
+            width: 100%;
+            padding: 60px 20px;
+        }
+    
+        .footer-links .footer-container {
+            grid-template-columns: 1fr;
+        }
+    }
+
+
+
+}

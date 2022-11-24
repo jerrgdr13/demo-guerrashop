@@ -4,4 +4,3 @@ document.querySelector('.menu-btn').addEventListener('click',() =>{
 );
 ScrollReveal().reveal('.showcase');
 ScrollReveal().reveal('.demo-cards', {delay:500});
-ScrollReveal().reveal('.cards-banner-one', {delay:500});
