@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/files/styles.css">
+    <title>Interactive Image Gallery</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Container and gallery styling */
+        .container {
+            width: 100%;
+            margin: auto;
+        }
+        
+        .nav-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .nav-logo {
+            max-width: 120px;
+        }
+
+        .nav-menu, .nav-menu-right {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-menu li, .nav-menu-right li {
+            margin: 0 15px;
+        }
+
+        .nav-menu a, .nav-menu-right a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Gallery styling */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.4s ease;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Lightbox styling */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+
+        .lightbox img {
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: 8px;
+        }
+
+        .lightbox:target {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu-btn">
+        <i class="fas fa-bars fa-2x"></i>
+    </div>
+    
+    <div class="container">
+        <nav class="nav-main">
+            <img src="/img/brand.png" alt="page Logo" class="nav-logo">
+            <ul class="nav-menu"> 
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="#">Candy</a></li>
+                <li><a href="#">Princess</a></li>
+            </ul> 
+            <ul class="nav-menu-right">
+                <li><a href="#"><i class="fa fa-search"></i></a></li>
+            </ul>   
+        </nav>
+    </div>
+    
+    <div class="gallery">
+        <a href="#img1" class="gallery-item"><img src="/img/dogs-1.jpeg" alt="image-1"></a>
+        <a href="#img2" class="gallery-item"><img src="/img/dogs-2.jpeg" alt="image-2"></a>
+        <a href="#img3" class="gallery-item"><img src="/img/dogs-3.jpeg" alt="image-3"></a>
+        <a href="#img4" class="gallery-item"><img src="/img/dogs-4.jpeg" alt="image-4"></a>
+        <a href="#img5" class="gallery-item"><img src="/img/dogs-5.jpeg" alt="image-5"></a>
+        <a href="#img6" class="gallery-item"><img src="/img/dogs-6.jpeg" alt="image-6"></a>
+        <a href="#img7" class="gallery-item"><img src="/img/dogs-7.jpeg" alt="image-7"></a>
+        <a href="#img8" class="gallery-item"><img src="/img/dogs-8.jpeg" alt="image-8"></a>
+    </div>
+
+    <!-- Lightbox for each image -->
+    <div id="img1" class="lightbox"><a href="#"><img src="/img/dogs-1.jpeg"></a></div>
+    <div id="img2" class="lightbox"><a href="#"><img src="/img/dogs-2.jpeg"></a></div>
+    <div id="img3" class="lightbox"><a href="#"><img src="/img/dogs-3.jpeg"></a></div>
+    <div id="img4" class="lightbox"><a href="#"><img src="/img/dogs-4.jpeg"></a></div>
+    <div id="img5" class="lightbox"><a href="#"><img src="/img/dogs-5.jpeg"></a></div>
+    <div id="img6" class="lightbox"><a href="#"><img src="/img/dogs-6.jpeg"></a></div>
+    <div id="img7" class="lightbox"><a href="#"><img src="/img/dogs-7.jpeg"></a></div>
+    <div id="img8" class="lightbox"><a href="#"><img src="/img/dogs-8.jpeg"></a></div>
+
+    <!-- ScrollReveal for image animation -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        // Activate ScrollReveal animations
+        ScrollReveal().reveal('.gallery-item', { 
+            delay: 200,
+            duration: 1000,
+            easing: 'ease-in-out',
+            scale: 0.9
+        });
+    </script>
+</body>
+</html>
+
