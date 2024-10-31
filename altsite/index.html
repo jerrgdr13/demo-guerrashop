@@ -7,132 +7,33 @@
     <title>Jerry Answers...</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* Basic reset */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Roboto Mono', monospace;
-        }
-
-        /* Center the main container */
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background-color: #f4f7fa;
-        }
-
-        /* Container for the form */
-        .app {
-            width: 100%;
-            max-width: 500px;
-            padding: 2rem;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        /* Form row styling */
-        .form-row {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            margin-bottom: 1.5rem;
-            width: 100%;
-        }
-
-        /* Label styling */
-        label {
-            margin-bottom: 0.5rem;
-            font-size: 1rem;
-            color: #333;
-        }
-
-        /* Text input styling */
-        input[type="text"] {
-            width: 100%;
-            padding: 0.75rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-            background-color: #f9f9f9;
-            transition: border-color 0.3s;
-        }
-
-        input[type="text"]:focus {
-            border-color: #007bff;
-            outline: none;
-        }
-
-        /* Button container */
-        .buttons {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 1rem;
-        }
-
-        /* Button styling */
-        button {
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        #answerButton {
-            background-color: #007bff;
-            color: #fff;
-        }
-
-        #answerButton:hover {
-            background-color: #0056b3;
-        }
-
-        #resetButton {
-            background-color: #6c757d;
-            color: #fff;
-        }
-
-        #resetButton:hover {
-            background-color: #5a6268;
-        }
-
-        /* Loading animation */
-        #loading {
-            display: none;
-            margin: 1rem auto;
-        }
-
-        /* Answer styling */
-        #answer {
-            margin-top: 2rem;
-            font-size: 1.25rem;
-            color: #333;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <nav class="nav-main">
-            <img src="/img/brand.png" alt="page Logo" class="nav-logo" style="width: 100px;">
-            <ul class="nav-menu"> 
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">Ask the Dog</h1>
+            <ul class="nav-links">
                 <li><a href="/index.html">Home</a></li>
-                <li><a href="/subpages/gallery.html">Gallery</a></li>
-                <li><a href="#">More</a></li>
-            </ul> 
-        </nav>
+                <li><a href="/subpages/promo-summer.html">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Profile Picture -->
+    <div class="profile-container">
+        <img src="/img/askdog.jpeg" alt="Profile Picture" class="profile-pic">
+        <h2>How to greet the dog?</h2>
+        <p>The dog will not answer your question unless you greet her in the way she likes. Therefore, you should greet her like this.
+
+            "Who is a good girl? you are!!" 
+            
+            This way the dog will answer your question.</p>
     </div>
 
     <div class="app">
         <div class="form-row">
-            <label for="petition">Petition: </label>
+            <label for="petition">Greet the dog!! </label>
             <input type="text" id="petition" placeholder="Enter your petition">
         </div>
         <div class="form-row">
@@ -140,7 +41,7 @@
             <input type="text" id="question" placeholder="Enter your question">
         </div>
         <div class="buttons">
-            <button id="answerButton">Ask Jerry</button>
+            <button id="answerButton">Ask the dog</button>
             <button id="resetButton">Reset</button>
         </div>
         <div id="loading">
